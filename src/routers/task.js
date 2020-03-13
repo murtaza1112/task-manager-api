@@ -118,7 +118,9 @@ router.get('/tasks/:id',auth,async (req,res)=>{
 
 
 router.delete('/tasks/:id',auth,async (req,res)=>{
-    try{ const task = await Task.findOneAndDelete({_id:req.params.id,owner:req.user._if})
+    try{ 
+        const task = await Task.findOneAndDelete({_id:req.params.id,owner:req.user._id})
+        console.log("The task will be deleted")
         console.log(task)
         if(!task)
         {

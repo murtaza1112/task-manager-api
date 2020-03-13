@@ -50,6 +50,7 @@ router.post('/users/me/avatar',auth,upload.single('avatar'),async(req,res)=>{
     //argument in upload.single function should match 
     //with key-value pair in the url header.
     //only accessible when no dests in the upload obj
+    
     const buffer = await sharp(req.file.buffer).resize({width:250,height:250}).png().toBuffer();
     //converts image to png and resizes to given dimensions then convert to buffer
     req.user.avatar = buffer

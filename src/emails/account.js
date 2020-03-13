@@ -24,5 +24,6 @@ const sendCancelMail = (email,name)=>{
 }
 
 module.exports  = {
-    sendWelcomeMail
+    sendWelcomeMail,
+    sendCancelMail
 }

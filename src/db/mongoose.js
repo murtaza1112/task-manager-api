@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
-const url='mongodb://127.0.0.1:27017/task-manager-api'
-
+const url=process.env.MONGODB_URL
+console.log(process.env)
 mongoose.connect(url,{
     useCreateIndex: true,//index created when object added in schema
     useNewUrlParser: true,

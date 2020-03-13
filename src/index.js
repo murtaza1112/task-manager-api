@@ -11,7 +11,6 @@ const port = process.env.PORT || 3000
 const multer  = require('multer')
 
 
-
 //add middleware function
 // app.use((req,res,next)=>{
 //     res.status(501).send("Sorry the site is currently under ma")
@@ -37,12 +36,9 @@ app.use(taskRouter)
 // test()
 
 
-
-
 app.listen(port,()=>{
     console.log('The port is active on :',port)
 })
-
 
 // const main = async ()=>{
 //     //To get user of a task
